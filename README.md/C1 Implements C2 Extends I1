@@ -1,0 +1,22 @@
+interface I1 {
+    void interfaceMethod();
+}
+
+class C2 {
+    void classMethod() {
+        System.out.println("Method from class C2");
+    }
+}
+
+// Corrected clause order: extends first, then implements
+class C1 extends C2 implements I1 {
+    public void interfaceMethod() {
+        System.out.println("Implemented interface method");
+    }
+
+    public static void main(String[] args) {
+        C1 obj = new C1();
+        obj.classMethod();
+        obj.interfaceMethod();
+    }
+}
